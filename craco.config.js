@@ -1,12 +1,10 @@
 const CracoAlias = require('craco-alias');
 
 module.exports = {
-  style: {
-    postcss: {
-      plugins: [
-        require('autoprefixer'),
-      ],
-    },
+  babel: {
+    plugins: [
+      'babel-plugin-macros',
+    ],
   },
   plugins: [
     {

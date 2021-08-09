@@ -2,28 +2,28 @@
   "compilerOptions": {
     "baseUrl": "src",
     "paths": {
-      "@browse/components": [
+      "@khl/components": [
         "components"
       ],
-      "@browse/components/*": [
+      "@khl/components/*": [
         "components/*"
       ],
-      "@browse/container": [
+      "@khl/container": [
         "container"
       ],
-      "@browse/container/*": [
+      "@khl/container/*": [
         "container/*"
       ],
-      "@browse/pages": [
+      "@khl/pages": [
         "pages"
       ],
-      "@browse/pages/*": [
+      "@khl/pages/*": [
         "pages/*"
       ],
-      "@browse/utils": [
+      "@khl/utils": [
         "utils"
       ],
-      "@browse/utils/*": [
+      "@khl/utils/*": [
         "utils/*"
       ]
     }
