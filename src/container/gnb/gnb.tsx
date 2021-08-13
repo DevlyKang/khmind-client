@@ -1,14 +1,12 @@
 import React from 'react';
-
 import { Logo } from '@khl/components/common';
+import * as Styled from './styled';
 
 function GnbContainer() {
   return (
-    <nav>
-      <h1>
-        <Logo />
-      </h1>
-    </nav>
+    <Styled.Header>
+      <Logo />
+    </Styled.Header>
   );
 }
 

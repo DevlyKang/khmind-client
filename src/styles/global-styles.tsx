@@ -1,22 +1,23 @@
 import React from 'react';
 import { createGlobalStyle } from 'styled-components';
-import tw, { GlobalStyles as BaseStyles } from 'twin.macro';
+import reset from 'styled-reset';
+import tw from 'twin.macro';
 
 const CustomGlobalStyles = createGlobalStyle`
+  ${ reset }
   body {
     font-size: 16px;
     background-color: #fafafa;
     ${ tw`antialiased` };
   }
+
+  * {
+    ${ tw`font-sans` };
+  }
 `;
 
 const GlobalStyles = () => {
-  return (
-    <>
-      <BaseStyles />
-      <CustomGlobalStyles />
-    </>
-  );
+  return <CustomGlobalStyles />;
 };
 
 export default GlobalStyles;

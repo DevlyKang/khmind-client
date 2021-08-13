@@ -1,11 +1,11 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import * as Styled from './styled';
 
 function LogoComponent() {
   return (
-    <Link to="/">
+    <Styled.Anchor to="/">
       <svg width="64" height="64" />
-    </Link>
+    </Styled.Anchor>
   );
 }
 

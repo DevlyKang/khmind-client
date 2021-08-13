@@ -1,6 +1,5 @@
 import 'twin.macro';
 import styledImport, { CSSProp, css as cssImport } from 'styled-components';
-import { DOMAttributes } from 'react';
 
 declare module 'twin.macro' {
   const styled: typeof styledImport;
