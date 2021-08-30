@@ -61,7 +61,8 @@ module.exports = {
     },
     extend: {
       colors: {
-        mokoko: '#6EB361',
+        mokokoLeaf: '#6eb360',
+        mokoko: '#ceed96',
       },
     },
   },
