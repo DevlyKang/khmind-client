@@ -5,7 +5,8 @@ type State = { isLogged: boolean };
 type Dispatch = (action: Action) => void;
 type Props = { children: ReactNode };
 
-const UserContext = createContext<{ state: State; dispatch: Dispatch } | undefined>(undefined);
+const UserStateContext = createContext<State | undefined>(undefined);
+const UserDispatchContext = createContext<Dispatch | undefined>(undefined);
 
 function reducer(state: State, action: Action) {
   switch (action.type) {
@@ -20,18 +21,17 @@ function reducer(state: State, action: Action) {
 function UserProvider({ children }: Props) {
   const [state, dispatch] = useReducer(reducer, { isLogged: false });
 
-  /** TODO memoize 필수 */
-  const value = { state, dispatch };
-
   return (
-    <UserContext.Provider value={ value }>
-      { children }
-    </UserContext.Provider>
+    <UserStateContext.Provider value={ state }>
+      <UserDispatchContext.Provider value={ dispatch }>
+        { children }
+      </UserDispatchContext.Provider>
+    </UserStateContext.Provider>
   );
 }
 
-function useUser() {
-  const context = useContext(UserContext);
+function useUserState() {
+  const context = useContext(UserStateContext);
 
   if (context === undefined) {
     throw new Error('');
@@ -40,4 +40,14 @@ function useUser() {
   return context;
 }
 
-export { UserProvider, useUser };
+function useUserDispatch() {
+  const context = useContext(UserDispatchContext);
+
+  if (context === undefined) {
+    throw new Error('');
+  }
+
+  return context;
+}
+
+export { UserProvider, useUserState, useUserDispatch };
