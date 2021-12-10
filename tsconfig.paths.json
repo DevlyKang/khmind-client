@@ -28,6 +28,18 @@
       ],
       "@khl/utils/*": [
         "utils/*"
+      ],
+      "@khl/lib": [
+        "lib"
+      ],
+      "@khl/lib/*": [
+        "lib/*"
+      ],
+      "@khl/hooks": [
+        "hooks"
+      ],
+      "@khl/hooks/*": [
+        "hooks/*"
       ]
     }
   }

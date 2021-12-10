@@ -1,0 +1,15 @@
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard-dynamic-subset.css');
+
+.text-editor {
+  padding: .6em;
+  border: 1px solid #efefef;
+  overflow: auto;
+}
+
+.text-editor__editor {
+  width: 100%;
+  height: 100%;
+  font-family: Pretendard, serif;
+  line-height: 1.25;
+  outline: none;
+}
